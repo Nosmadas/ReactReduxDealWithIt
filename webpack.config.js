@@ -1,7 +1,8 @@
 module.exports = {
     entry: './src/wwwroot/index.jsx',
     output: {
-        filename: './src/wwwroot/assets/bundle.js',
+        filename: 'bundle.js',
+        path: './src/wwwroot/assets/',
         publicPath: 'http://localhost:8090/assets'
     },
     module: {

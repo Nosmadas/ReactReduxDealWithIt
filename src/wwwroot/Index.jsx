@@ -5,7 +5,7 @@ import { createStore, compose, applyMiddleware, combineReducers  } from 'redux'
 import createLogger from 'redux-logger';
 import DevTools from './js/devtools/devTools';
 import App from './js/components/app';
-import reducer from './js/reducers/selectedTelemarketerReducer';
+import reducer from './js/reducers/telemarketerSelected';
 
 const logger = createLogger();
 const enhancer = compose(applyMiddleware(logger), DevTools.instrument());

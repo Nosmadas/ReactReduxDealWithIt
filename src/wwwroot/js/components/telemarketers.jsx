@@ -1,15 +1,11 @@
 import React from 'react';
+import Telemarketer from './telemarketer';
 
-const Telemarketers = (props) => (
+const Telemarketers = ({telemarketers}) => (
     <div>
         <strong>Telemarketers</strong>
-        {props.telemarketers.map(tm => (<div key={tm}>{tm}</div>))}
+        {telemarketers.map(tm => <Telemarketer key={tm} telemarketer={tm}/>) }
     </div>
 );
 
-
 export default Telemarketers;
-
-//function(tm) {
-//    return (<div key={tm}>{tm}</div>);
-//})
