@@ -1,7 +1,8 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Telemarketer = ({telemarketer}) => (
-    <div>{telemarketer}</div>
+    <div className="text-primary">{telemarketer}</div>
 );
 
 export default Telemarketer;
