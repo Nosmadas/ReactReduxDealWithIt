@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
-import selectedTelemarketers from './selectedTelemarketers';
+import telemarketerReducer from './telemarketerReducer';
 
 const app = combineReducers({
-    selectedTelemarketers,
-    telemarketers: (state = {}) => state,
-    territories: (state = {}) => state,
+    telemarketers: telemarketerReducer,
+    territories: (state = {}) => state
 });
 
 export default app;

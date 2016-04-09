@@ -1,7 +1,7 @@
-const telemarketerSelected = (id) => {
+const telemarketerSelected = (telemarketer) => {
     return {
         type: 'TELEMARKETER_SELECTED',
-        id
+        telemarketer
     }
 }
 

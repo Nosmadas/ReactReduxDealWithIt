@@ -5,8 +5,12 @@ const Telemarketer = ({telemarketer, onTelemarketerSelected}) => (
     <div>
         <div className="checkbox">
             <label>
-                <input onChange={() => onTelemarketerSelected() } type="checkbox" value="" />
-               {telemarketer} </label>
+                <input onChange={() => onTelemarketerSelected() }
+                    checked={telemarketer.selected}
+                    type="checkbox"
+                    value="" />
+                {telemarketer.name}
+            </label>
         </div>
     </div>
 );

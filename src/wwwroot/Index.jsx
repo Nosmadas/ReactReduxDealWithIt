@@ -7,10 +7,20 @@ import DevTools from './js/devtools/devTools';
 import rootReducer from './js/reducers/app';
 import App from './js/components/app';
 
+const telemarketers = [
+    { name: 'Big Ass', selected: false },
+    { name: 'Booty Sweat', selected: false },
+    { name: 'Shitty Butters', selected: false },
+    { name: 'Buttland', selected: true }];
+
+const territories = [
+    { name: "North" },
+    { name: "South West", t2: [{ name: "Dorset" }] },
+    { name: "South East" }];
+
 const initialState = {
-    selectedTelemarketers: [],
-    telemarketers: [],
-    territories: []
+    telemarketers: telemarketers,
+    territories: territories
 };
 
 const logger = createLogger();
@@ -18,12 +28,11 @@ const enhancer = compose(applyMiddleware(logger), DevTools.instrument());
 const store = createStore(rootReducer, initialState, enhancer);
 
 const renderApp = () => {
-    render(<Provider store={store}>
-        <div>
-            <App />
-            <DevTools />
-        </div>
-    </Provider>, document.getElementById('app'));
+    
+    render(<Provider store={store}><div>
+        <App />
+        <DevTools />
+    </div></Provider>, document.getElementById('app'));
 };
 
 store.subscribe(renderApp);

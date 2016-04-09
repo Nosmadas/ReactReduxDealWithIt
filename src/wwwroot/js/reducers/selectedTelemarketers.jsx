@@ -9,7 +9,8 @@
 const selectedTelemarketers = (state = [], action) => {
     
     if (action.type == 'TELEMARKETER_SELECTED') {
-        return Object.assign([], state,[...state, action.id]); 
+        
+        return Object.assign([], state, [...state, action.id]); 
     }
     
     return state;
