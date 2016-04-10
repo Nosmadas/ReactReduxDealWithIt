@@ -1,8 +1,8 @@
 const telemarketers = [
-    { name: 'Big Ass', selected: false },
-    { name: 'Booty Sweat', selected: false },
-    { name: 'Shitty Butters', selected: false },
-    { name: 'Buttland', selected: true }];
+    { name: 'Big Ass', selected: false, cards: { } },
+    { name: 'Booty Sweat', selected: false,  cards: { } },
+    { name: 'Shitty Butters', selected: false,  cards: { } },
+    { name: 'Buttland', selected: true,  cards: { } }];
 
 const territories = [
     { name: "North" },

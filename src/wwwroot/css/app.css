@@ -1,3 +1,15 @@
 body {
     padding-top: 20px;
 }
+
+.inline {
+    display: inline;
+}
+
+.card::before {
+    content: "- "
+}
+
+.card {
+    padding: 5px;
+}

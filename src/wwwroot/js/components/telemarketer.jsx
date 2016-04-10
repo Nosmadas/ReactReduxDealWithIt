@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Telemarketer = ({telemarketer, onTelemarketerSelected}) => (
-    <div>
-        <div className="checkbox">
+
+        <div className="checkbox inline">
             <label>
                 <input onChange={() => onTelemarketerSelected() }
                     checked={telemarketer.selected}
@@ -12,7 +12,6 @@ const Telemarketer = ({telemarketer, onTelemarketerSelected}) => (
                 {telemarketer.name}
             </label>
         </div>
-    </div>
 );
 
 export default Telemarketer;
