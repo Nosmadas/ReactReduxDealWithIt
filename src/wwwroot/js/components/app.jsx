@@ -13,4 +13,4 @@ const App = (telemarketers, territories) => (
 
 const mapStateToProps = (props) => ({ props });
 
-export default connect(mapStateToProps)(App);;
+export default connect(mapStateToProps)(App);

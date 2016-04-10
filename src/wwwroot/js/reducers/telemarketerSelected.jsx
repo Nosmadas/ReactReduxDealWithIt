@@ -6,14 +6,13 @@
 //     };
 // }
 
-const selectedTelemarketers = (state = [], action) => {
+const telemarketerSelected = (state = [], action) => {
     
     if (action.type == 'TELEMARKETER_SELECTED') {
-        
-        return Object.assign([], state, [...state, action.id]); 
+       return state.map(tm => tm.name === action.telemarketer.name ? Object.assign({}, tm, { selected: true }) : tm);
     }
     
     return state;
 };
 
-export default selectedTelemarketers;
+export default telemarketerSelected;
